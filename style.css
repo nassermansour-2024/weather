@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto";
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/5.jpg) center/cover no-repeat fixed; */
+  background: linear-gradient(rgba(209, 184, 232, 1), rgba(209, 184, 232, 0.3));
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.find-location {
+  position: relative;
+}
+.find-location input[type="text"] {
+  width: 100%;
+  padding: 8px 20px;
+  background: #7b51a1;
+}
+::placeholder {
+  color: #f4f1f7;
+  font-size: 15px;
+}
+i {
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  bottom: 5px;
+  padding: 0 10px;
+  color: #f4f1f7;
+}
+form input,
+form textarea,
+form select {
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.header_search {
+  width: 50%;
+  justify-self: center !important;
+}
+header {
+  background-color: #5a258a;
+  color: #f4f1f7;
+  padding: 20px 0;
+}
+.header_logo {
+  padding: 20px 0;
+}
+.header_logo_img img {
+  height: 40px;
+}
+.header_logo_text {
+  margin-left: 10px;
+}
+.header_logo h1 {
+  font-size: 22px;
+  margin-bottom: -5px;
+  font-weight: bold;
+}
+.header_logo small {
+  margin-left: 3px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+ul li {
+  flex: 1;
+}
+.mapboxgl-popup-content {
+  padding: 11px 15px 15px;
+  color: #333;
+  font-weight: bold;
+}
+#map {
+  height: 300px;
+  width: 100%;
+  border: 1px solid #7b51a1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.weather_result {
+  color: #f4f1f7;
+  margin-top: 15px;
+  border-radius: 15px !important;
+  -webkit-border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+  -ms-border-radius: 15px !important;
+  -o-border-radius: 15px !important;
+}
+.weather_map {
+  min-height: 380px;
+  background: #f4f1f7;
+  margin-top: 15px;
+  padding: 40px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background-color: #5a258a;
+  color: #f4f1f7;
+  border-color: transparent;
+  /*  */
+}
+.nav-link.active {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nav-tabs {
+  background-color: #f4f1f7;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.nav-link {
+  width: 100%;
+  color: #333;
+  font-weight: bold;
+}
+#myTabContent {
+  background: linear-gradient(rgba(90, 37, 138, 1), rgba(90, 37, 138, 0.3));
+  padding: 30px;
+  min-height: 230px;
+}
+
+.temp_now {
+  font-size: 100px;
+  font-weight: bold;
+}
+.current_icon {
+  margin-bottom: -10px;
+}
+
+.weather_status img {
+  width: 90px;
+  margin-top: 60px;
+}
+.weather_info {
+  min-height: 200px;
+  background-color: #f4f1f7;
+  padding: 20px;
+  margin-top: -60px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.today_info h6 {
+  margin-bottom: 15px;
+}
+.hours li {
+  width: 200px;
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+@media only screen and (max-width: 767px) {
+  #map {
+    height: 300px;
+  }
+  .row > * {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .weather_info {
+    margin-top: 0;
+  }
+}
+
+#marker {
+  background-image: url("/wp-content/uploads/2021/04/copywriter-logo-dark.svg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}

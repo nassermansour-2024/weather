@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Wolrd Wide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
+        integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container d-flex justify-content-sm-between align-items-center">
+            <div class="header_logo d-flex ">
+                <div class="header_logo_img">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/27-weather/weather.png" alt="">
+                </div>
+                <div class="header_logo_text">
+                    <h1>Weather</h1>
+                    <small>World wide</small>
+                </div>
+            </div>
+            <div class="header_search">
+                <form class="find-location w-75">
+                    <input type="text" placeholder="Enter a city name..." id="searchBtn">
+                    <i class="fas fa-search-location fa-lg"></i>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="weather_container">
+        <div class="container">
+            <div class="row">
+                <div class="weather_result col-sm-12 col-md-7 col-lg-6">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">Today </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                type="button" role="tab" aria-controls="contact" aria-selected="false"> Forec. 2
+                                days</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="d-flex justify-content-between">
+                                <div class="location_info">
+                                    <h3 class="location_name  mb-5"></h3>
+                                    <h2 class="temp_now"> <span class="current_temp"></span>°</h2>
+
+                                </div>
+
+                                <div class="weather_status d-flex flex-column .justify-content-between align-items-sm-arround ">
+                                    <h5 class="dateOfToday"></h5>
+                                    <div class="text-center">
+                                        <img class="current_icon" alt="">
+                                        <p class="current_status "></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade text-center" id="contact" role="tabpanel"
+                            aria-labelledby="contact-tab">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 class="tommorowDate mb-4"></h5>
+                                    <h2><span class="tommorowMax"></span>°</h2>
+                                    <img src="" alt="" class="tommorowIcon">
+                                    <h6><span class="tommorowText"></span></h6>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="afterTommorowDate mb-4"></h5>
+                                    <h2><span class="afterTommorowMax"></span>°</h2>
+                                    <img src="" alt="" class="afterTommorowIcon">
+                                    <h6><span class="afterTommorowText"></span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather_map d-xs-none col-sm-12 col-md-5 col-lg-6 mb-sm-4">
+                    <div id='map'>
+                        <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.7776931841!2d31.176062999529844!3d30.059462761654814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1734652486759!5m2!1sen!2seg"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-7 col-lg-6">
+                    <div class="weather_info">
+                        <h5 class="text-primary text-decoration-underline"><span class="location_name"></span>, <span
+                                class="forecastDate"></span>
+                        </h5>
+                        <div class="today_info mt-4">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p><b>Max. /Min.</b> <span class="max_temp text-muted"></span>/<span class="min_temp text-muted"></span></p>
+                                    <p><b>Humidity:</b> <span class="humidity text-muted"></span>%</p>
+                                    <p><b>Wind:</b> <span class="wind text-muted"> </span> <span class="text-muted">km/h</span> </p>
+                                </div>
+                                <div class="col-6">
+                                    <p><b>Sunrise:</b> <span class="sunrise text-muted"></span></p>
+                                    <p><b>Sunset:</b> <span class="sunset text-muted"></span></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"
+        integrity="sha512-trzlduO3EdG7Q0xK4+A+rPbcolVt37ftugUSOvrHhLR5Yw5rsfWXcpB3CPuEBcRBCHpc+j18xtQ6YrtVPKCdsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
